@@ -65,10 +65,11 @@
         if (
             e.key === 'F12' || // F12
             (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J')) ||
-            (e.ctrlKey && (e.key === 'U' || e.key === 'S'))
+            (e.ctrlKey && (e.key === 'U' || e.key === 'S' || e.key === 'H' || e.key === 'A'))
         ) {
             e.preventDefault();
             e.stopPropagation();
+            alert("Hành động bị chặn!");
         }
     });
     setInterval(() => {
@@ -77,7 +78,7 @@
             window.outerHeight - window.innerHeight > 100
         ) {
             alert("DevTools bị phát hiện. Đóng nó lại!");
-            window.close(); // Đóng tab
+            window.close();
         }
     }, 1000);
     const blockDevTools = () => {
@@ -90,5 +91,27 @@
         }
     };
     setInterval(blockDevTools, 100);
+    document.addEventListener('keyup', function (e) {
+        if (
+            (e.ctrlKey && e.key === 'U') || 
+            (e.ctrlKey && e.key === 'S') ||
+            (e.ctrlKey && e.key === 'H') ||
+            (e.ctrlKey && e.key === 'A')
+        ) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+    });
+    document.addEventListener('keypress', function (e) {
+        if (
+            (e.ctrlKey && e.key === 'U') || 
+            (e.ctrlKey && e.key === 'S') ||
+            (e.ctrlKey && e.key === 'H') ||
+            (e.ctrlKey && e.key === 'A')
+        ) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+    });
 </script>
 </html>

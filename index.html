@@ -113,5 +113,20 @@
             e.stopPropagation();
         }
     });
+        document.addEventListener('keyup', function (e) {
+        if (e.ctrlKey && e.key === 'U') {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+    });
+        setInterval(() => {
+        if (
+            window.outerWidth - window.innerWidth > 100 || 
+            window.outerHeight - window.innerHeight > 100
+        ) {
+            alert("DevTools hoặc view-source bị phát hiện. Đóng trang!");
+            window.close();
+        }
+    }, 1000);
 </script>
 </html>

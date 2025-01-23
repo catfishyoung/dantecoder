@@ -25,7 +25,7 @@
             <div class="features">
                 <div class="feature">
                     <h2><i class="fas fa-code"></i> Lập Trình</h2>
-                    <p>Có kinh nghiệm sử dụng các ngôn ngữ như : C#, C++, Python, HTML</p>
+                    <p>Có 2 năm kinh nghiệm sử dụng các ngôn ngữ như : C#, C++, Python, HTML</p>
                 </div>
                 <div class="feature">
                     <h2><i class="fas fa-desktop"></i> Hiện Đại</h2>
@@ -33,7 +33,7 @@
                 </div>
                 <div class="feature">
                     <h2><i class="fas fa-shield-alt"></i> Bảo Mật</h2>
-                    <p>Có kinh nghiệm làm bảo mật, tường lửa, mã hoá cho các Windows Form Apps, Source Code.</p>
+                    <p>Đã từng làm bảo mật, tường lửa, mã hoá cực kỳ ổn cho các Windows Form Apps, Source Code.</p>
                 </div>
             </div>
         </section>
@@ -52,11 +52,6 @@
                         </a>
                     </div>
                 </div>
-<!--                 <div class="achievement">
-                    <h2>Discord</h2>
-                    <p>Phát triển panel quản lý dữ liệu tối ưu cho các doanh nghiệp.</p>
-                    </div>
-                </div> -->
             </div>
         </section>
         <div class="overlay-text">Code By <span>Dante</span></div>
@@ -66,18 +61,34 @@
     document.addEventListener('contextmenu', function (e) {
         e.preventDefault();
     });
-
     document.addEventListener('keydown', function (e) {
-        if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
+        if (
+            e.key === 'F12' || // F12
+            (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J')) ||
+            (e.ctrlKey && (e.key === 'U' || e.key === 'S'))
+        ) {
             e.preventDefault();
-        }
-        if (e.ctrlKey && e.key === 'U') {
-            e.preventDefault();
+            e.stopPropagation();
         }
     });
     setInterval(() => {
-        if (window.outerWidth - window.innerWidth > 100 || window.outerHeight - window.innerHeight > 100) {
+        if (
+            window.outerWidth - window.innerWidth > 100 || 
+            window.outerHeight - window.innerHeight > 100
+        ) {
+            alert("DevTools bị phát hiện. Đóng nó lại!");
+            window.close(); // Đóng tab
         }
     }, 1000);
+    const blockDevTools = () => {
+        try {
+            (function () {
+                return false;
+            })['constructor']('debugger')();
+        } catch (e) {
+            console.log(e);
+        }
+    };
+    setInterval(blockDevTools, 100);
 </script>
 </html>

@@ -143,3 +143,34 @@ h3 {
 .searchbox button:hover {
   color: #bfbfbf; /* Chuyển màu icon khi hover */
 }
+/* Responsive cho màn hình nhỏ hơn 768px (mobile) */
+@media (max-width: 768px) {
+  h3 {
+    font-size: 28px; /* Thu nhỏ tiêu đề */
+    line-height: 50px;
+  }
+
+  .menu ul {
+    flex-direction: column; /* Menu dọc trên mobile */
+    gap: 5px;
+  }
+
+  .menu ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .searchbox {
+    width: 90%; /* Giữ chiều rộng phù hợp trên mobile */
+    height: 50px;
+  }
+
+  .searchbox input {
+    font-size: 16px; /* Chữ vừa phải hơn */
+  }
+
+  .searchbox button {
+    font-size: 18px;
+  }
+}
+

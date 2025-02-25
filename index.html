@@ -3,130 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dante | Hexalith VN</title>
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>VHCTruyen</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-    <div class="logo">
-        <img src="Lhhhogo-min-removebg-preview.png" alt="Logo"/>
-    </div>
-    <div class="container">
-        <h1>Dante From Hexalith VN</h1>
-        <p>Coder, Website, Panel, Bot Discord, Cheats</p>
-        <div class="social-icons">
-            <a href="#">C#</a>
-            <a href="#">C++</a>
-            <a href="#">Python</a>
-            <a href="#">HTML</a>
+    <div class="web">
+        <div class="header">
+            <header>
+                <h3>VHCTruyen</h3>
+            </header>
+            <div class="menu">
+                <ul>
+                    <li><a href="">Trang Chủ</a></li>
+                    <li><a href="">Thể Loại</a></li>
+                    <li><a href="">Truyện Mới</a></li>
+                    <li><a href="">Xếp Hạng</a></li>
+                    <li><a href="">Theo Dõi</a></li>
+                </ul>
+            </div>
         </div>
-        <section id="services" class="section">
-            <div class="features">
-                <div class="feature">
-                    <h2><i class="fas fa-code"></i> Lập Trình</h2>
-                    <p>Có 2 năm kinh nghiệm sử dụng các ngôn ngữ như : C#, C++, Python, HTML</p>
-                </div>
-                <div class="feature">
-                    <h2><i class="fas fa-desktop"></i> Hiện Đại</h2>
-                    <p>Thiết kế giao diện độc đáo, tối ưu cho website và mang lại phong cách hiện đại, đẹp đẽ.</p>
-                </div>
-                <div class="feature">
-                    <h2><i class="fas fa-shield-alt"></i> Bảo Mật</h2>
-                    <p>Đã từng làm bảo mật, tường lửa, mã hoá cực kỳ ổn cho các Windows Form Apps, Source Code.</p>
-                </div>
+        <div class="middle">    
+            <div class="searchbox">
+                <input type="type" placeholder="Tìm kiếm truyện..." />
+                <button type="submit"><i class="fas fa-search"></i></button> <!-- icon search --> 
             </div>
-        </section>
-        <section id="achievements" class="section">
-            <h2>About</h2>
-            <div class="achievements">
-                <div class="achievement">
-                    <h2>Thông Tin</h2>
-                    <p>Hoàn thiện dự án bot tự động hóa đạt giải trong cuộc thi lập trình.</p>
-                    <div class="social-logos">
-                        <a href="https://www.facebook.com/profile.php?id=61571832716727" target="_blank" title="Facebook">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                        <a href="https://discord.com/users/975615298302517258" target="_blank" title="Discord">
-                            <i class="fab fa-discord"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <div class="overlay-text">Code By <span>Dante</span></div>
+        </div>
     </div>
 </body>
-<script>
-    document.addEventListener('contextmenu', function (e) {
-        e.preventDefault();
-    });
-    document.addEventListener('keydown', function (e) {
-        if (
-            e.key === 'F12' || // F12
-            (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J')) ||
-            (e.ctrlKey && (e.key === 'U' || e.key === 'S' || e.key === 'H' || e.key === 'A'))
-        ) {
-            e.preventDefault();
-            e.stopPropagation();
-            alert("Hành động bị chặn!");
-        }
-    });
-    setInterval(() => {
-        if (
-            window.outerWidth - window.innerWidth > 100 || 
-            window.outerHeight - window.innerHeight > 100
-        ) {
-            alert("DevTools bị phát hiện. Đóng nó lại!");
-            window.close();
-        }
-    }, 1000);
-    const blockDevTools = () => {
-        try {
-            (function () {
-                return false;
-            })['constructor']('debugger')();
-        } catch (e) {
-            console.log(e);
-        }
-    };
-    setInterval(blockDevTools, 100);
-    document.addEventListener('keyup', function (e) {
-        if (
-            (e.ctrlKey && e.key === 'U') || 
-            (e.ctrlKey && e.key === 'S') ||
-            (e.ctrlKey && e.key === 'H') ||
-            (e.ctrlKey && e.key === 'A')
-        ) {
-            e.preventDefault();
-            e.stopPropagation();
-        }
-    });
-    document.addEventListener('keypress', function (e) {
-        if (
-            (e.ctrlKey && e.key === 'U') || 
-            (e.ctrlKey && e.key === 'S') ||
-            (e.ctrlKey && e.key === 'H') ||
-            (e.ctrlKey && e.key === 'A')
-        ) {
-            e.preventDefault();
-            e.stopPropagation();
-        }
-    });
-        document.addEventListener('keyup', function (e) {
-        if (e.ctrlKey && e.key === 'U') {
-            e.preventDefault();
-            e.stopPropagation();
-        }
-    });
-        setInterval(() => {
-        if (
-            window.outerWidth - window.innerWidth > 100 || 
-            window.outerHeight - window.innerHeight > 100
-        ) {
-            alert("DevTools hoặc view-source bị phát hiện. Đóng trang!");
-            window.close();
-        }
-    }, 1000);
-</script>
 </html>
